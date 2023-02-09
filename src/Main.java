@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-    int[] price = {100, 2000, 3000, 40000, 500, 555, 433, 5554, 4500};
+    long[] price = {100L, 2000L, 300000L, 4000000L, 500L, 55500L, 4337L, 5554888L, 450088L};
         SalesManager sales = new SalesManager(price);
         System.out.printf("Sale max = %,d руб. \n",sales.max());
         System.out.printf("Sale min = %,d руб. \n",sales.min());
