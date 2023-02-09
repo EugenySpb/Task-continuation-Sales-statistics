@@ -27,11 +27,15 @@ public class SalesManager {
 
     public long statistics() {
         long stat = 0;
-        long j = 0;
+        long min = min();
+        long max = max();
+        long count = 0;
         for (long sale : sales) {
-            stat += sale;
-                j++;
+            if (sale != min && sale != max) {
+                stat += sale;
+                count++;
             }
-        return (stat / j);
+        }
+        return stat / count;
     }
 }
