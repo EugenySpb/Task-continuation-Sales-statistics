@@ -25,13 +25,17 @@ public class SalesManager {
         return min;
     }
 
-    public long statistics() {
+    public int statistics() {
         int stat = 0;
-        int j = 0;
+        int min = min();
+        int max = max();
+        int count = 0;
         for (int sale : sales) {
-            stat += sale;
-                j++;
+            if (sale != min && sale != max) {
+                stat += sale;
+                count++;
             }
-        return (stat / j);
+        }
+        return stat / count;
     }
 }
